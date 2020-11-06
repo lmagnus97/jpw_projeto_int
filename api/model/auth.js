@@ -1,16 +1,18 @@
 const mongoose = require('mongoose')
 
 var schema = new mongoose.Schema({
-    nome: {
+    usuario: {
         type: String,
         require: true
     },
-    apelido: String,
-    posicao: Array,
-    foto: String,
-    data_nascimento: Date,
-    perna_preferida: String,
-    altura: Number
+    senha: {
+        type: String,
+        require: true
+    },
+    key: {
+        type: String,
+        require: true
+    },
 })
 
 module.exports = schema

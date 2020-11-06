@@ -1,0 +1,1356 @@
+{
+	"info": {
+		"_postman_id": "bbee394c-2e19-40db-aff0-96c73e8e770d",
+		"name": "Projeto Intermediario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/auth",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"admin\",\r\n    \"senha\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth"
+					]
+				},
+				"description": "Rota para geração da chave de acesso"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/auth",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\": \"admin\",\r\n    \"senha\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-a4j41Z289xVdXwLD8qNU3PC09U8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 01:55:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"key\": \"<key>\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/jogador?key=<key>",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Nome do Jogador\",\r\n    \"apelido\": \"Apelido\",\r\n    \"posicao\": \"Posição do jogador\",\r\n    \"foto\": \"link da foto\",\r\n    \"data_nascimento\": \"1997-11-19\",\r\n    \"perna_preferida\": \"D\",\r\n    \"altura\": 1.83\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/jogador?key=<key>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogador"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<key>"
+						}
+					]
+				},
+				"description": "Rota para salvar um novo jogador"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/jogador?key=<key>",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Nome do Jogador\",\r\n    \"apelido\": \"Apelido\",\r\n    \"posicao\": \"Posição do jogador\",\r\n    \"foto\": \"link da foto\",\r\n    \"data_nascimento\": \"1997-11-19\",\r\n    \"perna_preferida\": \"D\",\r\n    \"altura\": 1.83\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/jogador?key=<key>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jogador"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<key>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "225"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e1-Nhe969J2DxNtviUQQDCACShyov4\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:01:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"posicao\": [\n        \"Posição do jogador\"\n    ],\n    \"_id\": \"5fa4ae8fd2257c2ce8d04cca\",\n    \"nome\": \"Nome do Jogador\",\n    \"apelido\": \"Apelido\",\n    \"foto\": \"link da foto\",\n    \"data_nascimento\": \"1997-11-19T00:00:00.000Z\",\n    \"perna_preferida\": \"D\",\n    \"altura\": 1.83,\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=<KEY>",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"altura\": 1.84\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=<key>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogador",
+						"5fa4ae8fd2257c2ce8d04cca"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<key>"
+						}
+					]
+				},
+				"description": "Rota para atualizar dados do jogador"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=<KEY>",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"altura\": 1.84\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=<key>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jogador",
+								"5fa4ae8fd2257c2ce8d04cca"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<key>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "225"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e1-TIRNIUAjG0x9Tt761qAD2RkpLIg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:07:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"posicao\": [\n        \"Posição do jogador\"\n    ],\n    \"_id\": \"5fa4ae8fd2257c2ce8d04cca\",\n    \"nome\": \"Nome do Jogador\",\n    \"apelido\": \"Apelido\",\n    \"foto\": \"link da foto\",\n    \"data_nascimento\": \"1997-11-19T00:00:00.000Z\",\n    \"perna_preferida\": \"D\",\n    \"altura\": 1.84,\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=<KEY>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=<KEY>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogador",
+						"5fa4ae8fd2257c2ce8d04cca"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<KEY>"
+						}
+					]
+				},
+				"description": "Rota para buscar dados de um jogador específico"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=<KEY>",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=<KEY>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jogador",
+								"5fa4ae8fd2257c2ce8d04cca"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<KEY>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "225"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e1-TIRNIUAjG0x9Tt761qAD2RkpLIg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:10:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"posicao\": [\n        \"Posição do jogador\"\n    ],\n    \"_id\": \"5fa4ae8fd2257c2ce8d04cca\",\n    \"nome\": \"Nome do Jogador\",\n    \"apelido\": \"Apelido\",\n    \"foto\": \"link da foto\",\n    \"data_nascimento\": \"1997-11-19T00:00:00.000Z\",\n    \"perna_preferida\": \"D\",\n    \"altura\": 1.84,\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/jogador?key=<key>&posicao=GOL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/jogador?key=<key>&",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogador"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<key>"
+						},
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				},
+				"description": "Rota para buscar todos os jogadores"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/jogador?key=<key>&posicao=GOL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/jogador?key=<key>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jogador"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<key>"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "453"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c5-71IKy5eMeKLNTHUu3Pdt9x9rQ4c\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:12:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"posicao\": [\n            \"Posição do jogador\"\n        ],\n        \"_id\": \"5fa4ae5ad2257c2ce8d04cc9\",\n        \"nome\": \"Nome do Jogador\",\n        \"apelido\": \"Apelido\",\n        \"foto\": \"link da foto\",\n        \"data_nascimento\": \"1997-11-19T00:00:00.000Z\",\n        \"perna_preferida\": \"D\",\n        \"altura\": 1.83,\n        \"__v\": 0\n    },\n    {\n        \"posicao\": [\n            \"Posição do jogador\"\n        ],\n        \"_id\": \"5fa4ae8fd2257c2ce8d04cca\",\n        \"nome\": \"Nome do Jogador\",\n        \"apelido\": \"Apelido\",\n        \"foto\": \"link da foto\",\n        \"data_nascimento\": \"1997-11-19T00:00:00.000Z\",\n        \"perna_preferida\": \"D\",\n        \"altura\": 1.84,\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=key",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=key",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogador",
+						"5fa4ae8fd2257c2ce8d04cca"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "key"
+						}
+					]
+				},
+				"description": "Deleta um usuário"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=key",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/jogador/5fa4ae8fd2257c2ce8d04cca?key=key",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jogador",
+								"5fa4ae8fd2257c2ce8d04cca"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "key"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "289"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"121-la/AyagQGPkZEbN+YK+NeHhR3Oc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:14:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"n\": 1,\n    \"opTime\": {\n        \"ts\": \"6891828450147958786\",\n        \"t\": 25\n    },\n    \"electionId\": \"7fffffff0000000000000019\",\n    \"ok\": 1,\n    \"$clusterTime\": {\n        \"clusterTime\": \"6891828450147958786\",\n        \"signature\": {\n            \"hash\": \"UaH3xhe2EL242qhy/R+YDNQ90Rg=\",\n            \"keyId\": \"6837102990474608642\"\n        }\n    },\n    \"operationTime\": \"6891828450147958786\",\n    \"deletedCount\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/time?key=<ley>",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Time A\",\r\n    \"fundacao\": \"2020-11-20\",\r\n    \"categoria\": \"SUB20\",\r\n    \"modos\": [\"Campo\"],\r\n    \"jogadores\": [\"ko12k39a9jd\", \"ajsdaj293js\", \"aslk1239jjdas\"],\r\n    \"emblema\": \"link\",\r\n    \"cor_principal\": \"AZUL\",\r\n    \"cor_uniforme\": \"AZUL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/time?key=<ley>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<ley>"
+						}
+					]
+				},
+				"description": "Rota para inserir um novo time"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/time?key=<ley>",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Time A\",\r\n    \"fundacao\": \"2020-11-20\",\r\n    \"categoria\": \"SUB20\",\r\n    \"modos\": [\"Campo\"],\r\n    \"jogadores\": [\"ko12k39a9jd\", \"ajsdaj293js\", \"aslk1239jjdas\"],\r\n    \"emblema\": \"link\",\r\n    \"cor_principal\": \"AZUL\",\r\n    \"cor_uniforme\": \"AZUL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/time?key=<ley>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"time"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<ley>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "254"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fe-i7ccR7VH0lKDfAABYzXQ9PRjLVg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:17:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"modos\": [\n        \"Campo\"\n    ],\n    \"jogadores\": [\n        \"ko12k39a9jd\",\n        \"ajsdaj293js\",\n        \"aslk1239jjdas\"\n    ],\n    \"_id\": \"5fa4b252d2257c2ce8d04ccb\",\n    \"nome\": \"Time A\",\n    \"fundacao\": \"2020-11-20T00:00:00.000Z\",\n    \"categoria\": \"SUB20\",\n    \"emblema\": \"link\",\n    \"cor_principal\": \"AZUL\",\n    \"cor_uniforme\": \"AZUL\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/time?key=<key>&categoria=SUB20",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/time?key=<key>&categoria=SUB20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<key>"
+						},
+						{
+							"key": "categoria",
+							"value": "SUB20"
+						}
+					]
+				},
+				"description": "Rota para recuperar todos os times"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=<key>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=<key>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time",
+						"5fa4b252d2257c2ce8d04ccb"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<key>"
+						}
+					]
+				},
+				"description": "Rota para recuperar um time específico"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=<key>",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=<key>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"time",
+								"5fa4b252d2257c2ce8d04ccb"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<key>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "254"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fe-i7ccR7VH0lKDfAABYzXQ9PRjLVg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:21:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"modos\": [\n        \"Campo\"\n    ],\n    \"jogadores\": [\n        \"ko12k39a9jd\",\n        \"ajsdaj293js\",\n        \"aslk1239jjdas\"\n    ],\n    \"_id\": \"5fa4b252d2257c2ce8d04ccb\",\n    \"nome\": \"Time A\",\n    \"fundacao\": \"2020-11-20T00:00:00.000Z\",\n    \"categoria\": \"SUB20\",\n    \"emblema\": \"link\",\n    \"cor_principal\": \"AZUL\",\n    \"cor_uniforme\": \"AZUL\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=<key>",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emblema\": \"link\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=<key>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time",
+						"5fa4b252d2257c2ce8d04ccb"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<key>"
+						}
+					]
+				},
+				"description": "Rota para atualizar um time"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=<key>",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emblema\": \"link\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=<key>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"time",
+								"5fa4b252d2257c2ce8d04ccb"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<key>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "254"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fe-i7ccR7VH0lKDfAABYzXQ9PRjLVg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:23:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"modos\": [\n        \"Campo\"\n    ],\n    \"jogadores\": [\n        \"ko12k39a9jd\",\n        \"ajsdaj293js\",\n        \"aslk1239jjdas\"\n    ],\n    \"_id\": \"5fa4b252d2257c2ce8d04ccb\",\n    \"nome\": \"Time A\",\n    \"fundacao\": \"2020-11-20T00:00:00.000Z\",\n    \"categoria\": \"SUB20\",\n    \"emblema\": \"link\",\n    \"cor_principal\": \"AZUL\",\n    \"cor_uniforme\": \"AZUL\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=12k390ADUIJ239JAKL1-94129JD",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=<key>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time",
+						"5fa4b252d2257c2ce8d04ccb"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<key>"
+						}
+					]
+				},
+				"description": "Deleta um time"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=12k390ADUIJ239JAKL1-94129JD",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/time/5fa4b252d2257c2ce8d04ccb?key=<key>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"time",
+								"5fa4b252d2257c2ce8d04ccb"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<key>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "289"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"121-5eQgJNgCb3eNeRZ7SuTJg6R8dIw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:24:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"n\": 1,\n    \"opTime\": {\n        \"ts\": \"6891830988473630722\",\n        \"t\": 25\n    },\n    \"electionId\": \"7fffffff0000000000000019\",\n    \"ok\": 1,\n    \"$clusterTime\": {\n        \"clusterTime\": \"6891830988473630722\",\n        \"signature\": {\n            \"hash\": \"gTAw63H119VvKvUmuAId+PwTCzc=\",\n            \"keyId\": \"6837102990474608642\"\n        }\n    },\n    \"operationTime\": \"6891830988473630722\",\n    \"deletedCount\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/jogo?key=<key>",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": \"2020-11-01\",\r\n    \"time_casa\": \"aklmasdlmKMASD\",\r\n    \"time_visitante\": \"MKASDMA23K923\",\r\n    \"placar_casa\": 0,\r\n    \"placar_visitante\": 0,\r\n    \"local\": \"Local 1\",\r\n    \"modo\": \"Futsal\",\r\n    \"status\": \"A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/jogo?key=<key>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogo"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<key>"
+						}
+					]
+				},
+				"description": "Rota para criar um novo jogo"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/jogo?key=<key>",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": \"2020-11-01\",\r\n    \"time_casa\": \"aklmasdlmKMASD\",\r\n    \"time_visitante\": \"MKASDMA23K923\",\r\n    \"placar_casa\": 0,\r\n    \"placar_visitante\": 0,\r\n    \"local\": \"Local 1\",\r\n    \"modo\": \"Futsal\",\r\n    \"status\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/jogo?key=<key>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jogo"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<key>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "222"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"de-Df/4mFqxT+pKGhw6ge0xfnfxUFE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:26:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"placar_casa\": 0,\n    \"placar_visitante\": 0,\n    \"status\": \"A\",\n    \"_id\": \"5fa4b462d2257c2ce8d04ccc\",\n    \"data\": \"2020-11-01T00:00:00.000Z\",\n    \"time_casa\": \"aklmasdlmKMASD\",\n    \"time_visitante\": \"MKASDMA23K923\",\n    \"local\": \"Local 1\",\n    \"modo\": \"Futsal\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/jogo?key=<key>&time=aklmasdlmKMASD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/jogo?key=<key>&time=aklmasdlmKMASD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogo"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<key>"
+						},
+						{
+							"key": "time",
+							"value": "aklmasdlmKMASD"
+						}
+					]
+				},
+				"description": "Rota para recuperar todos os jogos"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/jogo?key=<key>&time=aklmasdlmKMASD",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/jogo?key=<key>&time=aklmasdlmKMASD",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jogo"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<key>"
+								},
+								{
+									"key": "time",
+									"value": "aklmasdlmKMASD"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "224"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e0-I/wNZrlgKI4d310nPym5+tN99cM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:29:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"placar_casa\": 0,\n        \"placar_visitante\": 0,\n        \"status\": \"A\",\n        \"_id\": \"5fa4b462d2257c2ce8d04ccc\",\n        \"data\": \"2020-11-01T00:00:00.000Z\",\n        \"time_casa\": \"aklmasdlmKMASD\",\n        \"time_visitante\": \"MKASDMA23K923\",\n        \"local\": \"Local 1\",\n        \"modo\": \"Futsal\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/jogo/5fa4b462d2257c2ce8d04ccc?key=<KEY>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/jogo/5fa4b462d2257c2ce8d04ccc?key=<KEY>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogo",
+						"5fa4b462d2257c2ce8d04ccc"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<KEY>"
+						}
+					]
+				},
+				"description": "Recuperar um jogo específico"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/jogo/5fa4b462d2257c2ce8d04ccc?key=<KEY>",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/jogo/5fa4b462d2257c2ce8d04ccc?key=<KEY>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jogo",
+								"5fa4b462d2257c2ce8d04ccc"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<KEY>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "222"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"de-Df/4mFqxT+pKGhw6ge0xfnfxUFE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:31:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"placar_casa\": 0,\n    \"placar_visitante\": 0,\n    \"status\": \"A\",\n    \"_id\": \"5fa4b462d2257c2ce8d04ccc\",\n    \"data\": \"2020-11-01T00:00:00.000Z\",\n    \"time_casa\": \"aklmasdlmKMASD\",\n    \"time_visitante\": \"MKASDMA23K923\",\n    \"local\": \"Local 1\",\n    \"modo\": \"Futsal\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/jogo/5fa4b462d2257c2ce8d04ccc?key=<KEY>",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"placar_casa\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/jogo/5fa4b462d2257c2ce8d04ccc?key=<KEY>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogo",
+						"5fa4b462d2257c2ce8d04ccc"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<KEY>"
+						}
+					]
+				},
+				"description": "Rota para atualizar um jogo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/jogo/5fa4b462d2257c2ce8d04ccc?key=<key>",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/jogo/5fa4b462d2257c2ce8d04ccc?key=<key>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jogo",
+						"5fa4b462d2257c2ce8d04ccc"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "<key>"
+						}
+					]
+				},
+				"description": "Rota para deletar um jogo"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/jogo/5fa4b462d2257c2ce8d04ccc?key=<key>",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/jogo/5fa4b462d2257c2ce8d04ccc?key=<key>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jogo",
+								"5fa4b462d2257c2ce8d04ccc"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "<key>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "289"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"121-Ptl1AAgaSgSsr7b/T4PFGR8hR1Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Nov 2020 02:32:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"n\": 1,\n    \"opTime\": {\n        \"ts\": \"6891833204676755458\",\n        \"t\": 25\n    },\n    \"electionId\": \"7fffffff0000000000000019\",\n    \"ok\": 1,\n    \"$clusterTime\": {\n        \"clusterTime\": \"6891833204676755458\",\n        \"signature\": {\n            \"hash\": \"fZJrpCym2zSwSTEyGpFu/cd3bV8=\",\n            \"keyId\": \"6837102990474608642\"\n        }\n    },\n    \"operationTime\": \"6891833204676755458\",\n    \"deletedCount\": 1\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

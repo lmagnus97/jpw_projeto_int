@@ -1,4 +1,3 @@
-const { query } = require("express");
 const express = require("express");
 const mongoose = require("../../db/connect");
 const router = express.Router();
@@ -45,6 +44,12 @@ router.post("/", function (req, res) {
 });
 
 router.put("/:id/", function (req, res) {
+
+  if (Object.keys(req.body).length === 0) {
+    res.status(400).json({ erro: "Nenhum dado enviado!" })
+  }
+
+  console.log("EM BRANCO")
   Model.findByIdAndUpdate(req.params.id, req.body, function (err, doc) {
     if (!err) {
       res.status(200).json(doc);
